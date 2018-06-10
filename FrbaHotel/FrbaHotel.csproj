@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{770CF46A-7F13-42E4-8148-20D838EB9CB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FrbaHotel</RootNamespace>
+    <AssemblyName>FrbaHotel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbmCliente\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmCliente\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmHabitacion\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmHabitacion\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRegimen\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRegimen\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelarReserva\Cancelar_Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelarReserva\Cancelar_Reserva.Designer.cs">
+      <DependentUpon>Cancelar_Reserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelarReserva\Confirmacion_de_cancelacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelarReserva\Confirmacion_de_cancelacion.Designer.cs">
+      <DependentUpon>Confirmacion_de_cancelacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\baja_de_hotel.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ciudad.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\cliente.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\consumible.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\consumible_por_estadia.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Datos.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Datos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Datos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\direccion.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\estadia.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\estado_reserva.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\factura.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\funcionalidad.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\habitacion.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\hotel.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\item_factura.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\metodo_de_pago.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\pais.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\regimen.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\regimen_por_hotel.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\reserva.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\rol.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\rol_por_funcionalidad.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\sp_mostrar_roles_Result.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tipoDeHabitacion.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\tipo_documento.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\usuario.cs">
+      <DependentUpon>Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FRBAhotel_pantallaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRBAhotel_pantallaPrincipal.Designer.cs">
+      <DependentUpon>FRBAhotel_pantallaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Buscar disponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Buscar disponibilidad.Designer.cs">
+      <DependentUpon>Buscar disponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\CrearReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\CrearReserva.Designer.cs">
+      <DependentUpon>CrearReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Modificar_reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Modificar_reserva.Designer.cs">
+      <DependentUpon>Modificar_reserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Ver_disponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\Ver_disponibilidad.Designer.cs">
+      <DependentUpon>Ver_disponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoEstadistico\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoEstadistico\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Seleccion_de_hotel_optativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Seleccion_de_hotel_optativo.Designer.cs">
+      <DependentUpon>Seleccion_de_hotel_optativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Seleccion_de_funcionalidad_obligatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Seleccion_de_funcionalidad_obligatorio.Designer.cs">
+      <DependentUpon>Seleccion_de_funcionalidad_obligatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\RESERVA_valido_huesped_y_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\RESERVA_valido_huesped_y_login.Designer.cs">
+      <DependentUpon>RESERVA_valido_huesped_y_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarConsumible\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarConsumible\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarEstadia\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarEstadia\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AbmRol\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelarReserva\Cancelar_Reserva.resx">
+      <DependentUpon>Cancelar_Reserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelarReserva\Confirmacion_de_cancelacion.resx">
+      <DependentUpon>Confirmacion_de_cancelacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRBAhotel_pantallaPrincipal.resx">
+      <DependentUpon>FRBAhotel_pantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarModificacionReserva\Buscar disponibilidad.resx">
+      <DependentUpon>Buscar disponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarModificacionReserva\CrearReserva.resx">
+      <DependentUpon>CrearReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarModificacionReserva\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarModificacionReserva\Modificar_reserva.resx">
+      <DependentUpon>Modificar_reserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarModificacionReserva\Ver_disponibilidad.resx">
+      <DependentUpon>Ver_disponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Seleccion_de_hotel_optativo.resx">
+      <DependentUpon>Seleccion_de_hotel_optativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Seleccion_de_funcionalidad_obligatorio.resx">
+      <DependentUpon>Seleccion_de_funcionalidad_obligatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\RESERVA_valido_huesped_y_login.resx">
+      <DependentUpon>RESERVA_valido_huesped_y_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Entity\Datos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Datos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entity\Datos.edmx.diagram">
+      <DependentUpon>Datos.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entity\Datos.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Datos.edmx</DependentUpon>
+      <LastGenOutput>Datos.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entity\Datos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Datos.edmx</DependentUpon>
+      <LastGenOutput>Datos.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
